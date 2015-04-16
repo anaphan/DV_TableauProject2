@@ -1,0 +1,4 @@
+adf <- data.frame(fromJSON(getURL(URLencode(gsub("\n", " ", '129.152.144.84:5001/rest/native/?query=
+                                                 "SELECT type, last_value(max_type) OVER (order by type_count) max_type, last_value(max_type) OVER (order by type_count) - type_count type_diff FROM (SELECT type, type_count, max(type_count) OVER (ORDER BY type_count desc) max_type 
+                                                 FROM CRIME_VIEW) ORDER BY type_diff asc"
+                                                 ')),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521/ORCL.usuniversi01134.oraclecloud.internal', USER='C##cs329e_php274', PASS='orcl_php274', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE))); tbl_df(adf)
